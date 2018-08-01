@@ -33,8 +33,7 @@ rcf/
 !/tools/dev-helpers
 !/tools/packages.config
 
-
-
+# others
 stuff/*
 .local/*
 build-output/*
