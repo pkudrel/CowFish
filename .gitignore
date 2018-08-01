@@ -28,9 +28,16 @@ obj/
 rcf/
 .vs/
 
+# tools
+/tools/*
+!/tools/dev-helpers
+!/tools/packages.config
+
+
+
 stuff/*
 .local/*
-/build-output/*
+build-output/*
 .build/*
 .dev/*
 
