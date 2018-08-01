@@ -31,7 +31,6 @@
   <ItemGroup>
     <Compile Include=".build.ps1" />
     <Compile Include="bl.ps1" />
-    <Compile Include="build.ps1" />
     <Compile Include="ps\assembly-tools.ps1" />
     <Compile Include="ps\ib-update-tools.ps1" />
     <Compile Include="ps\io.ps1" />
