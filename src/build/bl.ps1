@@ -33,7 +33,7 @@ $BL.ib = (Join-Path $BL.ToolsPath  "Invoke-Build\tools\Invoke-Build.ps1")
 
 
 $BL.BuildVersion = Get-GitVersion $psGitVersionStrategy $major $minor $patch $buildCounter
-$buildMiscInfo = $BL.BuildVersion.AssemblyInformationalVersion
+
 Write-Output "`$BL values"
 $BL.GetEnumerator()| Sort-Object -Property name | Format-Table Name, Value -AutoSize
 
