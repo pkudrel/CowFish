@@ -30,8 +30,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="MediatR, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MediatR.5.1.0\lib\net45\MediatR.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.5.7\lib\net45\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +57,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Bootstrap\AppEnvironment.cs" />
+    <Compile Include="Common\Bootstrap\AppEnvironmentBuilder.cs" />
+    <Compile Include="Common\Bootstrap\AppStartedEvent.cs" />
+    <Compile Include="Common\Bootstrap\AppStartingEvent.cs" />
+    <Compile Include="Common\Bootstrap\AppVersion.cs" />
+    <Compile Include="Common\Bootstrap\AppVersionBuilder.cs" />
+    <Compile Include="Common\Bootstrap\AssemblyCollector.cs" />
+    <Compile Include="Common\Bootstrap\Attempt.cs" />
+    <Compile Include="Common\Bootstrap\Boot.cs" />
+    <Compile Include="Common\Bootstrap\DeveloperConfig.cs" />
+    <Compile Include="Common\Bootstrap\DeveloperMode.cs" />
+    <Compile Include="Common\Bootstrap\Helpers.cs" />
+    <Compile Include="Common\Bootstrap\MediatorModule.cs" />
+    <Compile Include="Common\Bootstrap\Predicate.cs" />
+    <Compile Include="Common\Bootstrap\RegistryBase.cs" />
+    <Compile Include="Common\Bootstrap\SingleGlobalInstance.cs" />
+    <Compile Include="Common\Bootstrap\SingleInstanceHelper.cs" />
+    <Compile Include="Common\Bootstrap\Stopwatch.cs" />
+    <Compile Include="Consts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
