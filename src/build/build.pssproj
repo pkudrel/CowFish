@@ -25,19 +25,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="ps\" />
-  </ItemGroup>
+
   <ItemGroup>
     <Compile Include=".build.ps1" />
     <Compile Include="bl.ps1" />
-    <Compile Include="ps\assembly-tools.ps1" />
-    <Compile Include="ps\ib-update-tools.ps1" />
-    <Compile Include="ps\io.ps1" />
-    <Compile Include="ps\magicnumber.ps1" />
-    <Compile Include="ps\misc.ps1" />
-    <Compile Include="ps\psgitversion.ps1" />
-    <Compile Include="ps\syrup.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="Build" />

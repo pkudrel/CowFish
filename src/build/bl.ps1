@@ -21,10 +21,11 @@ $BL = @{}
 $BL.RepoRoot = (Resolve-Path ( & git rev-parse --show-toplevel))
 $BL.BuildDateTime = ((Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ"))
 $BL.ScriptsPath = (Split-Path $MyInvocation.MyCommand.Path -Parent)
-$BL.BuildOutPath = (Join-Path $BL.RepoRoot ".build" )
+$BL.BuildOutPath = (Join-Path $BL.RepoRoot "build" )
 $BL.ToolsPath = (Join-Path $BL.RepoRoot "tools" )
+$BL.BHPath = (Join-Path $BL.ToolsPath  "dev-helpers" )
 $BL.BuildScriptPath = $scriptFile
-$BL.PsAutoHelpers = (Join-Path $BL.ScriptsPath "ps") 
+$BL.PsAutoHelpers = (Join-Path $BL.BHPath "ps") 
 $BL.ib = (Join-Path $BL.ToolsPath  "Invoke-Build\tools\Invoke-Build.ps1")
 
 # import tools

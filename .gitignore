@@ -28,15 +28,19 @@ obj/
 rcf/
 .vs/
 
-# tools
+### Tools
 /tools/*
 !/tools/dev-helpers
 !/tools/packages.config
+# add local tools 
+!/tools/LibZ.Tool*
+
+
+
 
 # others
 stuff/*
 .local/*
-build-output/*
-.build/*
-.dev/*
+build/*
+dev/*
 
